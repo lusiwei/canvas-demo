@@ -2,11 +2,17 @@ var canvas=document.getElementById('canvas')
 var ctx=canvas.getContext('2d')
 var eraser=document.getElementById('eraser')
 var pen=document.getElementById('pen')
-
+var pen_w=document.getElementById('pen_w')
+var download=document.getElementById('download')
 canvas.width=document.documentElement.clientWidth
 canvas.height=document.documentElement.clientHeight
 
-var r=10
+pen_w.onchange=function (xx) {
+    r=pen_w.value
+}
+
+
+var r=pen_w.value
 var down=false
 var er=false
 canvas.onmousedown=function(xx){
@@ -66,6 +72,7 @@ canvas.onmousemove=function(xx){
 }
 canvas.onmouseup=function(xx){
     down=false
+    ctx.save()
 }
 
 eraser.onclick=function(xx){
@@ -89,6 +96,17 @@ pen.onclick=function (xx) {
         pen.classList.remove('active')
     }
 
+
+
+}
+download.onclick=function (xx) {
+    var url = canvas.toDataURL("image/png")
+    var a = document.createElement('a')
+    document.body.appendChild(a)
+    a.href = url
+    a.download = '我的画儿'
+    a.target = '_blank'
+    a.click()
 
 
 }

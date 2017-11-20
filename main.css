@@ -21,7 +21,7 @@
   height: 35px;
   transition: 0.5s;
 }
-#pen{
+#pen,#download{
   /*position: fixed;*/
   /*top:10px;*/
   /*left:80px;*/
@@ -50,7 +50,9 @@
   width: 28px;
   margin-left: 20px;
   vertical-align: top;
-
+}
+#pen_w{
+  margin-left: 20px;
 }
 #bar{
   position: fixed;

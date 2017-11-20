@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="main.css" title="" type="" />
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <script src="//at.alicdn.com/t/font_481076_apsc0xrhjwuvunmi.js"></script>
+  <script src="//at.alicdn.com/t/font_481076_rmsltxbk5fhzd7vi.js"></script>
   <title>我的canvas画板</title>
   <style type="text/css">
     .icon {
@@ -19,13 +19,18 @@
 <body>
 <canvas id="canvas"></canvas>
 <div id="bar">
-<svg class="icon" aria-hidden="true" id="eraser">
+<svg class="icon" aria-hidden="true" id="eraser" alt="橡皮擦">
   <use xlink:href="#icon-eraser"></use>
 </svg>
 <svg class="icon" aria-hidden="true" id="pen">
   <use xlink:href="#icon-icon"></use>
 </svg>
+
   <input type="color" id="color">
+  <input type="range" id="pen_w" min="1" max="20"  step="1" >
+  <svg class="icon" aria-hidden="true" id="download">
+    <use xlink:href="#icon-xiazai"></use>
+  </svg>
 </div>
 
 </body>
