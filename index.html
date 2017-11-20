@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="main.css" title="" type="" />
-  <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script src="//at.alicdn.com/t/font_481076_apsc0xrhjwuvunmi.js"></script>
+  <title>我的canvas画板</title>
+  <style type="text/css">
+    .icon {
+      width: 1em; height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
-  <canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="canvas"></canvas>
+<div id="bar">
+<svg class="icon" aria-hidden="true" id="eraser">
+  <use xlink:href="#icon-eraser"></use>
+</svg>
+<svg class="icon" aria-hidden="true" id="pen">
+  <use xlink:href="#icon-icon"></use>
+</svg>
+  <input type="color" id="color">
+</div>
+
 </body>
 <script src="main.js" charset="utf-8"></script>
 </html>

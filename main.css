@@ -4,6 +4,61 @@
 }
 #canvas {
   background:blue;
-  
+
+
+}
+#eraser{
+  /*position: fixed;*/
+  /*top:10px;*/
+  /*left: 10px;*/
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  fill: #fff;
+}
+#eraser.active{
+  width:35px;
+  height: 35px;
+  transition: 0.5s;
+}
+#pen{
+  /*position: fixed;*/
+  /*top:10px;*/
+  /*left:80px;*/
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  cursor: pointer;
+  margin-left: 20px;
+
+}
+#pen.active{
+  width: 35px;
+  height: 35px;
+  transition: 0.5s;
+}
+#color{
+  /*display: block;*/
+  /*position: fixed;*/
+  /*top:10px;*/
+  /*left: 150px;*/
+  /*border-radius: 100%;*/
+  border: none;
+  background: #fff;
+  /*padding: 10px;*/
+  height: 28px;
+  width: 28px;
+  margin-left: 20px;
+  vertical-align: top;
+
+}
+#bar{
+  position: fixed;
+  height: 30px;
+  /*background: #fff;*/
+  top:0px;
+  padding: 20px;
+  background: rgba(255,255,255,0.5);
+
 
 }
