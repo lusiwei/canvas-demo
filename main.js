@@ -6,19 +6,17 @@ var pen_w=document.getElementById('pen_w')
 var download=document.getElementById('download')
 canvas.width=document.documentElement.clientWidth
 canvas.height=document.documentElement.clientHeight
-
+var r=pen_w.value
 pen_w.onchange=function (xx) {
     r=pen_w.value
 }
-
-
-var r=pen_w.value
 var down=false
 var er=false
+var touch=false
+//PC端
 canvas.onmousedown=function(xx){
     x1=xx.clientX
     y1 =xx.clientY
-    // console.log(x1,y1)
     lastP={
         x:x1,
         y:y1
@@ -31,14 +29,9 @@ canvas.onmousedown=function(xx){
             ctx.fillStyle=color.value
             ctx.beginPath()
             ctx.arc(x1-r,y1-r,r,0,Math.PI*2)
-            // ctx.closePath()
             ctx.fill()
         }
-
     }
-
-
-
 }
 canvas.onmousemove=function(xx){
     //判断鼠标是否按下
@@ -73,7 +66,6 @@ canvas.onmousemove=function(xx){
 }
 canvas.onmouseup=function(xx){
     down=false
-    // ctx.save()
 }
 
 eraser.onclick=function(xx){
@@ -96,9 +88,6 @@ pen.onclick=function (xx) {
     }else {
         pen.classList.remove('active')
     }
-
-
-
 }
 download.onclick=function (xx) {
     var url = canvas.toDataURL("image/png")
@@ -108,7 +97,67 @@ download.onclick=function (xx) {
     a.download = '我的画儿'
     a.target = '_blank'
     a.click()
+}
+var clear=document.getElementById('clear')
+clear.onclick=function () {
+    ctx.clearRect(0,0,canvas.width,canvas.height)
+}
 
 
+
+//兼容手机端,触屏
+canvas.ontouchstart=function (xx) {
+    a1=xx.touches[0].clientX
+    b1 =xx.touches[0].clientY
+    lastP1={
+        a:a1,
+        b:b1
+    }
+    touch=true
+    if (touch){
+        if(er){
+            ctx.clearRect(a1,b1,r*4,r*4)
+        }else {
+            ctx.fillStyle=color.value
+            ctx.beginPath()
+            ctx.arc(a1-r,b1-r,r,0,Math.PI*2)
+            ctx.fill()
+        }
+    }
+
+}
+canvas.ontouchmove=function (xx) {
+    console.log(xx)
+    if (touch){
+        var a2=xx.touches[0].clientX
+        var b2=xx.touches[0].clientY
+        var newP={
+            a:a2,
+            b:b2
+        }
+        //判断橡皮擦是否开启
+        if(er){
+            ctx.clearRect(a2-r,b2-r,r*4,r*4)
+        }else {
+            ctx.fillStyle=color.value
+            ctx.beginPath()
+            ctx.arc(a2-r,b2-r,r,0,Math.PI*2)
+            ctx.fill()
+            ctx.closePath()
+            // 画两点间连线
+            ctx.beginPath()
+            ctx.lineWidth=r*2
+            ctx.moveTo(lastP1.a-r,lastP1.b-r)
+            ctx.lineTo(newP.a-r,newP.b-r)
+            ctx.closePath()
+            ctx.strokeStyle=color.value
+            ctx.stroke()
+            lastP1=newP
+        }
+    }
+}
+
+canvas.ontouchend=function () {
+    touch=true
 }
 

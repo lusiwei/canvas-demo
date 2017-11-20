@@ -3,7 +3,7 @@
   margin:0;
 }
 #canvas {
-  background:blue;
+  background:#fff;
 
 
 }
@@ -14,28 +14,32 @@
   width: 30px;
   height: 30px;
   cursor: pointer;
-  fill: #fff;
+  /*fill: #fff;*/
+  margin-top: 20px;
 }
 #eraser.active{
   width:35px;
   height: 35px;
   transition: 0.5s;
+  fill: red;
 }
-#pen,#download{
+#pen,#download,#clear{
   /*position: fixed;*/
   /*top:10px;*/
   /*left:80px;*/
   width: 30px;
   height: 30px;
-  fill: #fff;
+  /*fill: #fff;*/
   cursor: pointer;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
+  margin-top: 20px;
 
 }
 #pen.active{
   width: 35px;
   height: 35px;
   transition: 0.5s;
+  fill: red;
 }
 #color{
   /*display: block;*/
@@ -48,19 +52,41 @@
   /*padding: 10px;*/
   height: 28px;
   width: 28px;
-  margin-left: 20px;
-  vertical-align: top;
+  /*margin-left: 20px;*/
+  /*vertical-align: top;*/
+  margin-top: 20px;
 }
 #pen_w{
-  margin-left: 20px;
+  /*margin-left: 20px;*/
+  display: block;
+  transform: rotate(90deg);
+  margin-top: 50px;
+  /*margin-left: -10px;*/
+  margin-bottom: 50px;
+  /*align-self: center;*/
 }
 #bar{
   position: fixed;
-  height: 30px;
-  /*background: #fff;*/
+  /*height: 30px;*/
+  /*background: ghostwhite;*/
   top:0px;
-  padding: 20px;
-  background: rgba(255,255,255,0.5);
-
+  /*padding: 20px;*/
+  background: ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -25px;
+}
+#clear{
+  /*fill: #fff;*/
+  margin-bottom: 20px;
+}
+svg{
+  /*display: block;*/
+}
+input{
+  /*display: block;*/
+  display: block;
 
 }
