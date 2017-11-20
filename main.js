@@ -161,3 +161,14 @@ canvas.ontouchend=function () {
     touch=true
 }
 
+var hide=document.getElementById('hide')
+var bar=document.getElementById('bar')
+hide.onclick=function () {
+
+    if (bar.className=="active"){
+        bar.classList.remove('active')
+    }else {
+        bar.classList.add('active')
+    }
+}
+

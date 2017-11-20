@@ -79,6 +79,11 @@
   align-items: center;
   margin-left: -25px;
   /*display: none;*/
+  transition: 1s;
+}
+#bar.active{
+  margin-left: -100px;
+  transition: 1s;
 }
 #clear{
   /*fill: #fff;*/
@@ -90,5 +95,11 @@ svg{
 input{
   /*display: block;*/
   display: block;
+
+}
+#hide{
+  position: fixed;
+  top:5px;
+  left: 0px;
 
 }
