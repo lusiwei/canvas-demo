@@ -5,9 +5,10 @@
 body{
   overflow: hidden;
 }
+
 #canvas {
   background:#fff;
-  position: fixed;
+  /*position: fixed;*/
 
 
 }
@@ -69,6 +70,10 @@ body{
   margin-bottom: 50px;
   /*align-self: center;*/
 }
+/*#pen_w::after{*/
+  /*content: '';*/
+  /*display: block;*/
+/*}*/
 #bar{
   position: fixed;
   /*height: 30px;*/

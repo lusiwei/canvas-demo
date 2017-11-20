@@ -9,6 +9,8 @@ canvas.height=document.documentElement.clientHeight
 var r=pen_w.value
 pen_w.onchange=function (xx) {
     r=pen_w.value
+    pen_w.nextElementSibling.textContent=pen_w.value+'px'
+    pen_w.nextElementSibling.style.color="green"
 }
 var down=false
 var er=false
