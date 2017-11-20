@@ -19,23 +19,24 @@ canvas.onmousedown=function(xx){
     x1=xx.clientX
     y1 =xx.clientY
     // console.log(x1,y1)
+    lastP={
+        x:x1,
+        y:y1
+    }
     down=true
     if (down){
         if(er){
             ctx.clearRect(x1,y1,r*4,r*4)
         }else {
-            ctx.fillStyle='blue'
+            ctx.fillStyle=color.value
             ctx.beginPath()
             ctx.arc(x1-r,y1-r,r,0,Math.PI*2)
-            ctx.closePath()
+            // ctx.closePath()
             ctx.fill()
         }
 
     }
-    lastP={
-        x:x1,
-        y:y1
-    }
+
 
 
 }
@@ -50,7 +51,7 @@ canvas.onmousemove=function(xx){
         }
         //判断橡皮擦是否开启
         if(er){
-            ctx.clearRect(x2,y2,r*4,r*4)
+            ctx.clearRect(x2-r,y2-r,r*4,r*4)
         }else {
             ctx.fillStyle=color.value
             ctx.beginPath()
@@ -72,7 +73,7 @@ canvas.onmousemove=function(xx){
 }
 canvas.onmouseup=function(xx){
     down=false
-    ctx.save()
+    // ctx.save()
 }
 
 eraser.onclick=function(xx){
