@@ -4,6 +4,7 @@
 }
 #canvas {
   background:#fff;
+  position: fixed;
 
 
 }
@@ -77,6 +78,7 @@
   justify-content: space-between;
   align-items: center;
   margin-left: -25px;
+  /*display: none;*/
 }
 #clear{
   /*fill: #fff;*/
