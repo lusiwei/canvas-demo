@@ -111,3 +111,12 @@ input{
   left: 0px;
 
 }
+/* undo,redo按钮样式 */
+.do{
+  padding: 5px;
+  border-radius: 5px;
+} 
+#nextstep{
+  margin-top: 10px;
+
+}
