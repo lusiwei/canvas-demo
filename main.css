@@ -9,7 +9,7 @@ body{
 
 #canvas {
   background:#fff;
-  /*position: fixed;*/
+  position: fixed;
 
 
 }
