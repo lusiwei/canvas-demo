@@ -7,8 +7,11 @@ var eraser=getDom('eraser')
 var pen=getDom('pen')
 var pen_w=getDom('pen_w')
 var download=getDom('download')
-canvas.width=document.documentElement.clientWidth
-canvas.height=document.documentElement.clientHeight
+window.onresize=function(){
+    canvas.width=document.documentElement.clientWidth
+    canvas.height=document.documentElement.clientHeight
+}
+
 var r=pen_w.value
 pen_w.onchange=function (xx) {
     r=pen_w.value
