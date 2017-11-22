@@ -1,9 +1,12 @@
-var canvas=document.getElementById('canvas')
+var getDom=function(id){
+    return document.getElementById(id)
+}
+var canvas=getDom('canvas')
 var ctx=canvas.getContext('2d')
-var eraser=document.getElementById('eraser')
-var pen=document.getElementById('pen')
-var pen_w=document.getElementById('pen_w')
-var download=document.getElementById('download')
+var eraser=getDom('eraser')
+var pen=getDom('pen')
+var pen_w=getDom('pen_w')
+var download=getDom('download')
 canvas.width=document.documentElement.clientWidth
 canvas.height=document.documentElement.clientHeight
 var r=pen_w.value
@@ -15,8 +18,22 @@ pen_w.onchange=function (xx) {
 var down=false
 var er=false
 var touch=false
+//laststep.onclick=function(){
+//    ctx.putImageData(lastImg,  0,  0)
+//}
+//nextstep.onclick=function(){
+//    ctx.putImageData(nextImg,  0,  0)
+//    
+//}
+var pushArr=[]
+var step=-1
+var nullImg=ctx.getImageData(0,0,canvas.width,canvas.height)
 //PC端
 canvas.onmousedown=function(xx){
+    // lastImg = ctx.getImageData(0,  0,  canvas.width,  canvas.height)
+  
+
+    
     x1=xx.clientX
     y1 =xx.clientY
     lastP={
@@ -66,8 +83,28 @@ canvas.onmousemove=function(xx){
     }
 
 }
+
 canvas.onmouseup=function(xx){
     down=false
+    step++;
+    var nextImg = ctx.getImageData(0,  0,  canvas.width,  canvas.height)
+    console.log(nextImg)
+    pushArr.push(nextImg)
+    console.log(pushArr)
+}
+laststep.onclick=function(){
+    if(step>0){
+        step--;
+        ctx.putImageData(pushArr[step],0,0)
+    }else{
+        ctx.putImageData(nullImg,0,0)
+    }
+}
+nextstep.onclick=function(){
+    if(step<=pushArr.length-1){
+        ctx.putImageData(pushArr[step],0,0)
+        step++
+    } 
 }
 
 eraser.onclick=function(xx){
@@ -158,15 +195,12 @@ canvas.ontouchmove=function (xx) {
         }
     }
 }
-
 canvas.ontouchend=function () {
     touch=true
-}
-
-var hide=document.getElementById('hide')
-var bar=document.getElementById('bar')
+} 
+var hide=getDom('hide')
+var bar=getDom('bar')
 hide.onclick=function () {
-
     if (bar.className=="active"){
         bar.classList.remove('active')
     }else {
