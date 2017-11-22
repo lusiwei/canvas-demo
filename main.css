@@ -4,16 +4,12 @@
 }
 body{
   overflow: hidden;
-  /* position: fixed; */
-  /* 不加这个在手机端会上下滑动 */
-  /* font-size: 0px !important; */
 }
 
 #canvas {
   background:#fff;
-  /* position: fixed; */
+  position: fixed;
   /* height: 100%; */
-  /* border: 1px solid red; */
 
 
 }
