@@ -7,6 +7,8 @@ var eraser=getDom('eraser')
 var pen=getDom('pen')
 var pen_w=getDom('pen_w')
 var download=getDom('download')
+canvas.width=document.documentElement.clientWidth
+canvas.height=document.documentElement.clientHeight
 window.onresize=function(){
     canvas.width=document.documentElement.clientWidth
     canvas.height=document.documentElement.clientHeight
@@ -149,6 +151,7 @@ clear.onclick=function () {
 
 //兼容手机端,触屏
 canvas.ontouchstart=function (xx) {
+
     a1=xx.touches[0].clientX
     b1 =xx.touches[0].clientY
     lastP1={
