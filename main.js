@@ -147,6 +147,7 @@ download.onclick=function (xx) {
 var clear=document.getElementById('clear')
 clear.onclick=function () {
     ctx.clearRect(0,0,canvas.width,canvas.height)
+    canvas.style.cursor="url(del.png),default"
 }
 
 

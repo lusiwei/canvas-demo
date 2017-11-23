@@ -48,7 +48,7 @@ body{
   height: 35px;
   transition: 0.5s;
   fill: red;
-  cursor: url('./emoji.png'),default;
+  /* cursor: url('./emoji.png'),default; */
 }
 #color{
   border: none;
