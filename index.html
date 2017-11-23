@@ -7,7 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
             <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
   <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="//at.alicdn.com/t/font_481076_32zudwy8cqyta9k9.js"></script>
+  <script src="//at.alicdn.com/t/font_481076_l798uaeco00y66r.js"></script>
   <title>我的canvas画板</title>
   <style type="text/css">
     .icon {
@@ -28,23 +28,29 @@
   <use xlink:href="#icon-eraser"></use>
 </svg>
 <svg class="icon" aria-hidden="true" id="pen">
-  <use xlink:href="#icon-icon"></use>
+  <use xlink:href="#icon-huabi"></use>
 </svg>
 
-  <input type="color" id="color" value="#5361d0">
 
   <svg class="icon" aria-hidden="true" id="download">
-    <use xlink:href="#icon-xiazai"></use>
+    <use xlink:href="#icon-xiazai1"></use>
   </svg>
   <svg class="icon" aria-hidden="true" id="clear">
-    <use xlink:href="#icon-clear1"></use>
+    <use xlink:href="#icon-qingchu"></use>
   </svg>
+  <input type="color" id="color" value="#5361d0">
   <p>细</p>
   <input type="range" id="pen_w" min="1" max="15"  step="1" value="3">
   <p></p>
   <p>粗</p><br/>
-  <button id='laststep' class="do">undo</button>
-  <button id="nextstep" class="do">redo</button>
+  <!-- <button id='laststep' class="do">undo</button>
+  <button id="nextstep" class="do">redo</button> -->
+  <svg class="icon" aria-hidden="true" id="laststep">
+    <use xlink:href="#icon-undo"></use>
+  </svg>
+  <svg class="icon" aria-hidden="true" id="nextstep">
+    <use xlink:href="#icon-redo"></use>
+  </svg>
 </div>
 
 </body>

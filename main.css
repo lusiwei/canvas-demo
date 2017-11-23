@@ -68,7 +68,7 @@ body{
   transform: rotate(90deg);
   margin-top: 50px;
   /*margin-left: -10px;*/
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   /*align-self: center;*/
 }
 /*#pen_w::after{*/
@@ -81,7 +81,7 @@ body{
   /*background: ghostwhite;*/
   top:0px;
   /*padding: 20px;*/
-  background: ;
+  /* background: ; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -96,7 +96,7 @@ body{
 }
 #clear{
   /*fill: #fff;*/
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 svg{
   /*display: block;*/
@@ -114,10 +114,18 @@ input{
 }
 /* undo,redo按钮样式 */
 .do{
-  padding: 5px;
-  border-radius: 5px;
+  /* padding: 5px;
+  border-radius: 5px; */
 } 
 #nextstep{
-  margin-top: 10px;
+  /* margin-top: 10px; */
 
+}
+
+#laststep,#nextstep{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
