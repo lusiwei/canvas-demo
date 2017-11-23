@@ -4,6 +4,7 @@
 }
 body{
   overflow: hidden;
+  /* cursor: url("emoji.png"),default; */
 }
 
 #canvas {
@@ -39,6 +40,7 @@ body{
   cursor: pointer;
   /*margin-left: 20px;*/
   margin-top: 20px;
+  cursor: url("./emoji.png")
 
 }
 #pen.active{
@@ -46,6 +48,7 @@ body{
   height: 35px;
   transition: 0.5s;
   fill: red;
+  cursor: url('./emoji.png'),default;
 }
 #color{
   border: none;
@@ -146,8 +149,10 @@ input[type=range]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   margin-top: -5px;
-  background: #fff; 
+  background: #fff url(./emoji.png); 
   border-radius: 50%; 
   border: solid 0.125em rgba(205, 224, 230, 0.5); 
   box-shadow: 0 .125em .125em #3b4547; 
+  cursor: pointer;
+  transform: rotate(-90deg)
 }
