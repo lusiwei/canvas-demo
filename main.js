@@ -117,7 +117,7 @@ eraser.onclick=function(xx){
     if(er){
         eraser.classList.add('active')
         pen.classList.remove('active')
-        canvas.style.cursor="url(ku.png),default"
+        canvas.style.cursor="url(emoji4.png),default"
     }else {
         eraser.classList.remove('active')
     }
@@ -130,7 +130,7 @@ pen.onclick=function (xx) {
     if(using){
         pen.classList.add('active')
         eraser.classList.remove('active')
-        canvas.style.cursor="url(emoji.png),default"
+        canvas.style.cursor="url(emoji3.png),default"
     }else {
         pen.classList.remove('active')
     }
