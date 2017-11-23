@@ -48,19 +48,13 @@ body{
   fill: red;
 }
 #color{
-  /*display: block;*/
-  /*position: fixed;*/
-  /*top:10px;*/
-  /*left: 150px;*/
-  /*border-radius: 100%;*/
   border: none;
   background: #fff;
   /*padding: 10px;*/
   height: 28px;
   width: 28px;
-  /*margin-left: 20px;*/
-  /*vertical-align: top;*/
   margin-top: 20px;
+
 }
 #pen_w{
   /*margin-left: 20px;*/
@@ -117,8 +111,8 @@ input{
   /* padding: 5px;
   border-radius: 5px; */
 } 
-#nextstep{
-  /* margin-top: 10px; */
+#laststep{
+  margin-bottom: 20px;
 
 }
 
@@ -127,5 +121,5 @@ input{
   height: 30px;
   cursor: pointer;
   margin-top: -10px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
