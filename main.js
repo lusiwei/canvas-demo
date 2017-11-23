@@ -203,6 +203,11 @@ canvas.ontouchmove=function (xx) {
 }
 canvas.ontouchend=function () {
     touch=true
+    step++;
+    var nextImg = ctx.getImageData(0,  0,  canvas.width,  canvas.height)
+    console.log(nextImg)
+    pushArr.push(nextImg)
+    console.log(pushArr)
 } 
 var hide=getDom('hide')
 var bar=getDom('bar')
